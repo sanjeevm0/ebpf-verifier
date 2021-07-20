@@ -3,6 +3,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(ebpf_verifier)
 
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
 if (IS_DIRECTORY "${PROJECT_SOURCE_DIR}/.git")
   # Install Git pre-commit hook
   file(COPY scripts/pre-commit scripts/commit-msg
